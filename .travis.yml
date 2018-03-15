@@ -4,6 +4,7 @@ sudo: false
 language: python
 python:
   - "2.7"
+  - "3.6"
 
 cache:
   directories:
@@ -42,3 +43,7 @@ notifications:
 addons:
     apt_packages:
     - libsensors4
+
+matrix:
+  allow_failures:
+  - python: "3.6"
